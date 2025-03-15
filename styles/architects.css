@@ -16,6 +16,10 @@
 }
 
 /* shared styles */
+.section-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+}
 
 .display-flex{
   display: flex;
@@ -29,6 +33,9 @@
 /* Dark 03 */
 .text-light-gray{
   color: #727272;
+}
+.text-primary{
+  color: #FF900E;
 }
 
 .bg-light{
@@ -104,19 +111,45 @@ main > section{
   margin-left: 130px;
   max-width: 530px;
 }
-.feature-title{
-  font-size: 2.8rem;
-  font-weight: 700;
-}
+
 #quick-list{
   font-weight: 500;
+}
+.facts-container{
+  display: flex;
+  justify-content: space-around;
+  gap: 120px;
+}
+.fact{
+  border: 1px solid sandybrown;
+  padding: 20px;
+  border-radius: 5px;
 }
 /* id property supercede class property, so '#quick list' remain 500 though its parent '.feature-title' holds font weight 700 */
 
 /* Responsive media query */
 @media screen and (max-width: 576px) {
-  .navbar, .nav-links{
+  .navbar, 
+  .nav-links, 
+  .teams{
     flex-direction: column;
+  }
+  .team-image-container{
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 24px; */
+  }
+  .our-features{
+    margin-left: 20px;
+  }
+}
+
+/* Medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams{
+    flex-direction: column;
+  }
+  .our-features{
+    margin: 20px auto;
   }
   
 }
