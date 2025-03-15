@@ -44,6 +44,13 @@
   border-radius: 5px;
   
 }
+main{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main > section{
+  margin-top: 130px;
+}
 
 /* header styles */
 
@@ -82,6 +89,29 @@
 .banner-image{
   width: 100%;
 }
+
+/* Team and frature related styles */
+.teams{
+  align-items: center;
+}
+.team-image-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.our-features{
+  margin-left: 130px;
+  max-width: 530px;
+}
+.feature-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+#quick-list{
+  font-weight: 500;
+}
+/* id property supercede class property, so '#quick list' remain 500 though its parent '.feature-title' holds font weight 700 */
 
 /* Responsive media query */
 @media screen and (max-width: 576px) {
